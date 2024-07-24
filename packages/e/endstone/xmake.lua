@@ -1,7 +1,11 @@
 package("endstone")
+   add_urls("https://github.com/EndstoneMC/endstone.git")
+   add_versions("0.4.10", "")
 
-    set_urls("https://github.com/EndstoneMC/endstone.git")
-
-   on_install(function(package)
-        
+    on_install(function (package)
+        local configs = {}
+        if package:config("shared") then
+            configs.kind = "shared"
+        end
+        import("package.tools.xmake").install(package, configs)
     end)

@@ -1,9 +1,9 @@
 package("endstone")
    add_urls("https://raw.githubusercontent.com/YoumiHa/endstone/main/endstone.tar")
-   add_versions("latest","53eeff9f109865c3cb4494a53a4c9afe2b46fae272e88a4b34aa0ae4290ff334")
+   add_versions("latest","b469fede7fbc2f019d7d9c73d785fa39de3648101c80d019ff4c3ef2f2a94430")
     on_install("windows", function (package)
         
-        os.exec("powershell ./start.ps1")
+        os.exec("build.bat")
         os.cp("lib/include/bedrock", package:installdir("include"))
         os.cp("lib/include/endstone", package:installdir("include"))
         os.cp("lib/endstone_runtime.lib", package:installdir("lib"))

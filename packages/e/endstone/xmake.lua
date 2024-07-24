@@ -1,6 +1,5 @@
 package("endstone")
    set_urls("https://github.com/EndstoneMC/endstone.git")
-   add_versions("0.4.10", "")
 
     on_install(function (package)
         local configs = {}

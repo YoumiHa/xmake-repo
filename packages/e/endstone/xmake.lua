@@ -1,9 +1,9 @@
 package("endstone")
    add_urls("https://raw.githubusercontent.com/YoumiHa/endstone/main/endstone.tar")
-   add_versions("latest","b469fede7fbc2f019d7d9c73d785fa39de3648101c80d019ff4c3ef2f2a94430")
+   add_versions("latest","218a00bd4c3f5caba92619e857592aa80ba31e75c24a61c91b1180d6bf7030c0")
     on_install("windows", function (package)
         
-        os.exec("build.bat")
+        os.exec("python start.py")
         os.cp("lib/include/bedrock", package:installdir("include"))
         os.cp("lib/include/endstone", package:installdir("include"))
         os.cp("lib/endstone_runtime.lib", package:installdir("lib"))

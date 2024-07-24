@@ -1,5 +1,5 @@
 package("endstone")
-   set_urls("https://github.com/YoumiHa/endstone.git")
+   set_urls("https://raw.githubusercontent.com/YoumiHa/endstone/main/endstone.zip")
 
     on_install("windows", function (package)
         os.exec("build.bat");

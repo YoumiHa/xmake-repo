@@ -3,7 +3,7 @@ package("endstone")
    add_versions("latest","218a00bd4c3f5caba92619e857592aa80ba31e75c24a61c91b1180d6bf7030c0")
     on_install("windows", function (package)
         
-        os.run("build.bat")
+        os.run("start build.bat")
         os.cp("lib/include/bedrock", package:installdir("include"))
         os.cp("lib/include/endstone", package:installdir("include"))
         os.cp("lib/endstone_runtime.lib", package:installdir("lib"))
